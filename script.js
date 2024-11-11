@@ -101,9 +101,16 @@ let changed15 = masivi15.filter((number) => {
 });
 console.log(changed15);
 
-let container = document.getElementById("container");
-let masivi16 = Array.from(container.getElementsByTagName("div"));
+let masivi16 = [];
+for (let index = 0; index < 6; index++) {
+  let div = document.createElement("div");
+  masivi16.push(div);
+}
+masivi16[0].classList.add("box");
+masivi16[2].classList.add("box");
+masivi16[3].classList.add("box");
+masivi16[4].classList.add("box");
 let changed16 = masivi16.filter((number) => {
-  return number.classList.contains("klasi");
+  return number.classList.contains("box");
 });
 console.log(changed16);
